@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <form id = "form"class="fo">
+        <input id = "name"class = "n"type="text"placeholder = "Enter your Full Name"><br>
+        <input id="email" class="e" type="email"placeholder = "Enter your email Here"><br>
+        <input id="pass" class="p" type="text"placeholder = "Enter your New Password"><br>
+        <input type="submit">
+       
+    </form>
+</body>
+</html>
+<script>
+    var form = document.querySelector("form");
+    var userData =JSON.parse(localStorage.getItem("userData"));//this thing call the signup data and null data
+      form.addEventListener("submit",function(event){ //triggerring sign in submit button
+          event.preventDefault();
+          var data = {
+              name:form.name.value,
+              email:form.email.value,
+              password:form.pass.value,
+          };
+          if(userData === null){
+              alert("please create an account");
+          }
+          else if(userData.Email==data.email && userData.Password == data.password){
+              alert("Sign in Successful")
+              localStorage.setItem("signin",JSON.stringify(userData));
+          }
+          else{
+              alert("user does not exsist");
+          }
+      })  
+    
+</script>

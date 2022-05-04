@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.nav{
+    display:flex;
+    height: 80px;
+    width: 100%;
+    background-color: white;
+}
+.logo{
+    width: 20%;
+}
+.text{
+    width:50%;
+    display: flex;
+}
+.user{
+    width:30%;
+    display: flex;
+}
+.user{
+    margin-left:20px;
+}
+.fo{
+    display: grid;
+    
+   
+    justify-content: center;
+    margin:100px;
+    width:85%;
+    height: 200px;
+    text-align: center;
+    padding: 12px;
+    background-color: rgb(117, 29, 4);
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+.fo>input{
+    color: blue;
+    border-radius: 4px;
+}
+body{
+    background-color: rgb(157, 159, 159);
+}
+
